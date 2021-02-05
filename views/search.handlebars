@@ -1,0 +1,53 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Let's Go Travel Planner</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="./logout">Sign Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Box -->
+<section class="container">
+    <div class="row my-5">
+        <div class="col my-5">
+            <form id="create-form">
+                <div class="form-group text-center my-5">
+                    <p class="large-size font-weight-bold">
+                        Your Destination:
+                        <input type="text" id="ca" name="name" />
+                        <button type="submit" class="text-center" id="create-form">Submit</button>
+                    </p>
+                </div>
+            </form>
+            <div class="my-5 text-center">
+                <p><a href="./result">View Itinerary</a></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Search Result -->
+<section class="container">
+    {{!-- Restaurant Result --}}
+    <div class="row me-5">
+        <div class="col mx-5" id="restaurantsResults">
+            {{!-- <h4 class="text-center">Restaurants</h4> --}}
+        </div>
+        {{!-- Activity Result --}}
+        <div class="col" id="activitiesResults">
+            {{!-- <h4 class="text-center">Activities</h4> --}}
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/search.js"></script>

@@ -1,0 +1,89 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Let's Go Travel Planner</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="./logout">Sign Out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="container my-5">
+  <div class="row">
+    {{!-- Restaurant Column --}}
+    <div class="col my-5 mx-3 border border-dark rounded-lg">
+      <h3 class="text-center font-weight-bold my-3">Restaurant</h3>
+      <ul class="my-5" id="rNames">
+
+      </ul>
+    </div>
+    {{!-- Activity Column --}}
+    <div class="col my-5 mx-3 border border-dark rounded-lg">
+      <h3 class="text-center font-weight-bold my-3">Activity</h3>
+      <ul class="my-5" id="aNames">
+      
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+{{!-- MODAL RESTAURANT ELEMENT --}}
+<div class="modal fade" id="myRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modalRestaurantName"></h5>
+        <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modalRestaurantAddress"></h5>
+        <p id="modalRestaurantPhone"></p>
+        <p id="modalRestaurantWebsite"></p>
+        <p>
+        <img id="modalRestaurantPhoto" alt="image of item" class="img-fluid">
+        <textarea id="modalRestaurantComment"  style="min-width: 100%" placeholder="Write your comments here" class="form-control" rows="3"></textarea>
+        <p id="savedRestaurantComments"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary updateRestaurant">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- MODAL ACTIVITY ELEMENT --}}
+<div class="modal fade" id="myActivityModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modalActivityName"></h5>
+        <button type="button" class="close closeModal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="modalActivityDescription" class="1h-sm"></p>
+        <p>
+        <img id="modalActivityPhoto" alt="image of item" class="img-fluid">
+
+        <textarea id="modalActivityComment"  style="min-width: 100%" placeholder="Write your comments here" class="form-control" rows="3"></textarea>
+        <p id="savedActivityComments"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary updateActivity">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/allResult.js"></script>

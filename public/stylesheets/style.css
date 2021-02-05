@@ -1,0 +1,30 @@
+form.signup,
+form.login {
+    margin-top: 50px;
+}
+
+body {
+    background-color: #33aa85;
+}
+
+.large-size {
+    font-size: large;
+    color: #e0c10c;
+}
+
+.activitySaveBtn {
+    font: 40px;
+    color: yellow;
+}
+
+.save {
+    margin-left: 7px;
+}
+
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+ }
